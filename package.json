@@ -1,0 +1,31 @@
+{
+  "name": "fiverr-brief-monitor",
+  "version": "1.0.0",
+  "description": "Chrome extension to monitor Fiverr briefs with AI integration",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development",
+    "watch": "webpack --mode=development --watch",
+    "clean": "rimraf dist",
+    "dev": "npm run clean && npm run watch"
+  },
+  "keywords": ["chrome-extension", "fiverr", "monitoring", "freelance"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.258",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "rimraf": "^5.0.5",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "openai": "^4.24.1",
+    "axios": "^1.6.2"
+  }
+}

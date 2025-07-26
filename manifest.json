@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Fiverr Brief Monitor",
+  "version": "1.0",
+  "description": "Monitor Fiverr briefs and get notifications for new matches",
+  "permissions": [
+    "storage",
+    "notifications",
+    "activeTab",
+    "background",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.fiverr.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.fiverr.com/briefs/overview/matches*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Fiverr Brief Monitor"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
